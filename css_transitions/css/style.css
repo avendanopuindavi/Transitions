@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 20px auto;
+}
+
+/* General Button Style */
+
+.btn {
+    border: none;
+    color: inherit;
+    width: 100px;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    background-color: teal;
+    padding: 25px 80px;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    transition: all 0.3s;
+    border-radius: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    z-index: -1;
+
+}
+
+/* Specific Button Style */
+
+/* Button 1 */
+
+.btn1 {
+    color: #fff;
+}
+
+.btn1:hover,
+.btn1:active {
+    color: teal;
+    background: #fff;
+}
+
+/* Button 2 */
+.btn2 {
+    overflow: hidden;
+    color: white;
+}
+
+.btn2:after {
+    width: 130%;
+    height: 0;
+    transform: rotate(-10deg);
+    top: -21px;
+    left: -20px;
+    background-color: #fff;
+}
+
+.btn2:hover,
+.btn2:active {
+    color: teal;
+}
+
+.btn2:active {
+    transform: scale(1.05);
+}
+
+.btn2:hover:after,
+.btn2:active:after {
+    height: 150%;
+}
+
+/* Button 3 */
+.btn3 {
+    overflow: hidden;
+    color: #fff;
+}
+
+.btn3:after {
+    top: 30px;
+    left: 120px;
+    height: 0px;
+    width: 0px;
+    opacity: 0.8;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.btn3:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn3:active {
+    color: teal;
+    transition: all 0s;
+}
+
+
+.btn3:active:after {
+    width: 700px;
+    height: 700px;
+    color: teal;
+    top: -400%;
+    left: -34%;
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 50%;
+
+}
+
+/* Button 4 */
+
+.btn4 {
+    background: white;
+    color: teal;
+    display: block;
+    text-align: center;
+    border: none;
+    font-family: inherit;
+    outline: 1px solid transparent;
+    font-size: inherit;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: all 0.3s;
+    border-radius: 0%;
+    transform-style: preserve-3d;
+}
+
+.btn4:after {
+    overflow: none;
+    content: 'hold me';
+    border-radius: 0;
+    position: absolute;
+    transition: all 0.3s;
+    z-index: 22;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    line-height: 70px;
+    background: #535353;
+    transform-origin: 0% 100%;
+    transform: rotateX(90deg);
+}
+
+.btn4:before {
+    overflow: none;
+    content: 'Teal';
+    border-radius: 0;
+    position: absolute;
+    transition: all 0.3s;
+    z-index: 22;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    line-height: 70px;
+    background: #024959;
+    transform-origin: 50% 0%;
+    transform: rotateX(-90deg);
+}
+
+.btn4:hover {
+    background: grey;
+    transform-origin: 50% 100%;
+    transform: rotateX(-90deg) translateY(100%);
+    transition: ease-in-out .35s;
+    cursor: grab;
+}
+
+.btn4:active {
+    background-color: #eeeeee;
+    transform-origin: 100% 0%;
+    transform: rotateX(90deg) translateY(-100%);
+    transition: .7s ease-in-out;
+    cursor: grabbing;
+}
+
+.btn4:hover:after {
+    background: grey;
+}
+
+.btn4:active:after {
+    background: #535353;
+}
+
+.btn4:active:before {
+    background: teal;
+}
+
+
+
+
+/* Button 5 */
+
+.btn5 {
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 15px 30px;
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: rgb(234, 44, 44);
+}
+
+.btn5:before,
+.btn5:after {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content: '';
+    border-radius: 50%;
+    background-color: rgb(234, 44, 44);
+}
+
+.btn5:before {
+    bottom: 0px;
+    left: -25px;
+}
+
+.btn5:after {
+    top: -25px;
+    right: 0;
+}
+
+.btn5:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.btn5:active {
+    transform: rotate(45deg) scale(1.3);
+    opacity: 0.8;
+    transition: .5s forwards;
+}
+
+
+/* Button 6 */
+
+.btn6 {
+    border: 1px solid rgb(234, 44, 44);
+    background-color: transparent;
+    color: rgb(234, 44, 44);
+
+}
+
+.btn6:hover {
+    background-color: rgba(234, 44, 44, 0.2);
+}
+
+.btn6:active {
+    background-color: rgba(234, 44, 44, 1);
+    color: #fff;
+    transition: ease-in-out 0.1s;
+}
+
+/* Button 7 */
+
+.btn7 {
+	overflow: hidden;
+    color: rgb(234, 44, 44);
+	background-color: transparent;
+	border-top: 1px solid rgb(234, 44, 44);
+    border-left: 1px solid rgb(234, 44, 44);
+    border-right: 1px solid rgb(234, 44, 44);
+    border-bottom: 1px solid rgb(234, 44, 44);
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+}
+
+.btn7:after {
+	width: 0px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background-color: rgba(234, 44, 44, 0.2)
+	
+
+}
+
+.btn7:hover:after {
+	width: 110%;
+	left: 0;
+	right: auto;
+	transition: all 1s;
+}
+
+.btn7:active {
+	transform: scale(1.05);
+	transition: ease-in-out 0.1s;
+}
+
+
+/* Button 8 */
+
+.btn8 {
+	overflow: hidden;
+	border: 1px solid rgb(234, 44, 44);
+    background-color: transparent;
+    color: rgb(234, 44, 44);
+	border-radius: 0;
+}
+
+.btn8 span {
+
+    position: absolute;
+    width: 20%;
+    height: 100%;
+	top:0;
+    background-color: rgba(234, 44, 44, 0.2);
+    transform: translateY(150%);
+    left: calc((var(--n) - 1) * 20%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * .08s);
+    z-index: -1;
+}
+
+.btn8:hover span {
+    transform: translateY(0);
+
+}
+
+.btn8:active {
+	transform: scale(1.05);
+}
+
+.btn8 span:nth-child(1) {
+    --n: 1;
+}
+
+.btn8 span:nth-child(2) {
+    --n: 2;
+}
+
+.btn8 span:nth-child(3) {
+    --n: 3;
+}
+.btn8 span:nth-child(4) {
+    --n: 4;
+}
+.btn8 span:nth-child(5) {
+    --n: 5;
+}
+
